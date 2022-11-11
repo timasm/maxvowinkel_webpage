@@ -1,0 +1,28 @@
+.footer {
+    z-index: 99;
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow;
+    label {
+        z-index: 2;
+        font-size: 22px;
+    }
+    .label-hover {
+        cursor: pointer;
+        &:hover {
+            color: lightgray;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .footer {
+        flex-direction: column;
+    }
+    label {
+        font-size: 14px;
+    }
+}

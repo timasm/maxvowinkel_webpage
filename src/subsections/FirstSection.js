@@ -2,7 +2,8 @@ import "./subsection.scss";
 
 import icon from "../img/icon.png";
 
-const FirstSection = () => {
+const FirstSection = ({ scrollRef }) => {
+   const executeScroll = () => scrollRef.current.scrollIntoView();
    return (
       <>
          <div className="subsection">
@@ -19,7 +20,9 @@ const FirstSection = () => {
                         BE YOUR <b>BEST</b>
                      </i>
                   </label>
-                  <button>STARTE NOCH HEUTE</button>
+                  <button onClick={() => executeScroll()}>
+                     STARTE NOCH HEUTE
+                  </button>
                </div>
             </div>
          </div>
